@@ -1,101 +1,101 @@
-#pragma once
+ï»¿#pragma once
 #pragma  pack (1)
 // DDS_TOPIC_HUD_PERIOD_SEND
 struct FS_HudPeriod
 {
-	float SideslipAngle;//²à»¬½Ç *100
-	float AttackAngle;//¹¥½Ç *100
-	float CurrentAirSpeed;//µ±Ç°¿ÕËÙ *50
-	float VacuoSpeed;//Õæ¿ÕËÙ *50
-	float CurrentMachNumber;//µ±Ç°ÂíºÕÊı *1000
-	float PressueAltitude;//ÏÔÊ¾ÆøÑ¹¸ß¶È
-	float AmbientTemperature;//»úÍâÎÂ¶È
-	float CurrentVerticalSpeed;//µ±Ç°´¹Ö±ËÙ¶È
-	float CourseBeaconDeviation;//º½ÏòĞÅ±êÆ«Àë(LOC)
-	float GlidePathDeviation;//ÏÂ»¬µÀÆ«Àë£¨GS)
-	float RadioAltitude;//ÎŞÏßµç¸ß¶È
-	float FrontWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©Ç°ÂÖÓĞÎŞÂÖÔØ
-	float LeftWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©×óÂÖÓĞÎŞÂÖÔØ
-	float RightWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©ÓÒÂÖÓĞÎŞÂÖÔØ
-	float FrontUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ Ç°ÂÖÊÕÆğ/·ÅÏÂ
-	float LeftUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ ×óÂÖÊÕÆğ/·ÅÏÂ
-	float RightUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ ÓÒÂÖÊÕÆğ/·ÅÏÂ
-	float TheFlapsPosition;//½óÒíÎ»ÖÃ
-	float StallingSpeed;//Ê§ËÙËÙ¶È
-	float ChannelOff;//º½µÀÆ«Àë
-	float DecisionAltitude;//¾ö¶Ï¸ß¶È
-	float TrueHeading;//Õæº½Ïò
-	float PitchAngle;//¸©Ñö½Ç
-	float RollAngle;//ºá¹ö½Ç
-	float GroundSpeed;//µØËÙ
-	float WindSpeed;//·çËÙ		
-	float WindDirection;//·çÏò
+	float SideslipAngle;//ä¾§æ»‘è§’ *100
+	float AttackAngle;//æ”»è§’ *100
+	float CurrentAirSpeed;//å½“å‰ç©ºé€Ÿ *50
+	float VacuoSpeed;//çœŸç©ºé€Ÿ *50
+	float CurrentMachNumber;//å½“å‰é©¬èµ«æ•° *1000
+	float PressueAltitude;//æ˜¾ç¤ºæ°”å‹é«˜åº¦
+	float AmbientTemperature;//æœºå¤–æ¸©åº¦
+	float CurrentVerticalSpeed;//å½“å‰å‚ç›´é€Ÿåº¦
+	float CourseBeaconDeviation;//èˆªå‘ä¿¡æ ‡åç¦»(LOC)
+	float GlidePathDeviation;//ä¸‹æ»‘é“åç¦»ï¼ˆGS)
+	float RadioAltitude;//æ— çº¿ç”µé«˜åº¦
+	float FrontWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å‰è½®æœ‰æ— è½®è½½
+	float LeftWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å·¦è½®æœ‰æ— è½®è½½
+	float RightWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å³è½®æœ‰æ— è½®è½½
+	float FrontUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å‰è½®æ”¶èµ·/æ”¾ä¸‹
+	float LeftUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å·¦è½®æ”¶èµ·/æ”¾ä¸‹
+	float RightUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å³è½®æ”¶èµ·/æ”¾ä¸‹
+	float TheFlapsPosition;//è¥Ÿç¿¼ä½ç½®
+	float StallingSpeed;//å¤±é€Ÿé€Ÿåº¦
+	float ChannelOff;//èˆªé“åç¦»
+	float DecisionAltitude;//å†³æ–­é«˜åº¦
+	float TrueHeading;//çœŸèˆªå‘
+	float PitchAngle;//ä¿¯ä»°è§’
+	float RollAngle;//æ¨ªæ»šè§’
+	float GroundSpeed;//åœ°é€Ÿ
+	float WindSpeed;//é£é€Ÿ		
+	float WindDirection;//é£å‘
 };
 
 // DDS_TOPIC_DU_SEND
 struct FS_DU
 {
-	double GNSSLongtitude;//GNSS¾­¶È
-	double GNSSLatitude;//GNSSÎ³¶È
-	double GNSSAltitude;//GNSS¸ß¶È
-	float GNSSEastToSpeed;//GNSS¶«ÏòËÙ¶È
-	float GNSSNorthToSpeed;//GNSS±±ÏòËÙ¶È
-	float GNSSHeavenToSpeed;//GNSSÌìÏòËÙ¶È
-	double Longtitude;//¾­¶È
-	double Latitude;//Î³¶È
-	double Altitude;//¸ß¶È
-	float EastToSpeed;//¶«ÏòËÙ¶È
+	double GNSSLongtitude;//GNSSç»åº¦
+	double GNSSLatitude;//GNSSçº¬åº¦
+	double GNSSAltitude;//GNSSé«˜åº¦
+	float GNSSEastToSpeed;//GNSSä¸œå‘é€Ÿåº¦
+	float GNSSNorthToSpeed;//GNSSåŒ—å‘é€Ÿåº¦
+	float GNSSHeavenToSpeed;//GNSSå¤©å‘é€Ÿåº¦
+	double Longtitude;//ç»åº¦
+	double Latitude;//çº¬åº¦
+	double Altitude;//é«˜åº¦
+	float EastToSpeed;//ä¸œå‘é€Ÿåº¦
 
-	float NorthToSpeed;//±±ÏòËÙ¶È
-	float HeavenToSpeed;//ÌìÏòËÙ¶È
-	float AxialAcceleration;//ÖáÏò¼ÓËÙ¶È
-	float LateralAcceleration;//²àÏò¼ÓËÙ¶È
-	float NormalAcceleration;//·¨Ïò¼ÓËÙ¶È
-	float YawAngle;//Æ«º½½Ç
-	float PitchAngle;//¸©Ñö½Ç
-	float RollAngle;//ºá¹ö½Ç
-	float YawRate;//Æ«º½½ÇËÙ¶È
-	float PitchRate;//¸©Ñö½ÇËÙ¶È
+	float NorthToSpeed;//åŒ—å‘é€Ÿåº¦
+	float HeavenToSpeed;//å¤©å‘é€Ÿåº¦
+	float AxialAcceleration;//è½´å‘åŠ é€Ÿåº¦
+	float LateralAcceleration;//ä¾§å‘åŠ é€Ÿåº¦
+	float NormalAcceleration;//æ³•å‘åŠ é€Ÿåº¦
+	float YawAngle;//åèˆªè§’
+	float PitchAngle;//ä¿¯ä»°è§’
+	float RollAngle;//æ¨ªæ»šè§’
+	float YawRate;//åèˆªè§’é€Ÿåº¦
+	float PitchRate;//ä¿¯ä»°è§’é€Ÿåº¦
 
-	float RollRate;//¹ö×ª½ÇËÙ¶È
-	float WindSpeed;//·çËÙ
-	float WindDirection;//·çÏò
-	float GNSSGroundSpeed;//GNSSµØËÙ
-	float GNSSTrackAngle;//GNSSº½¼£½Ç
-	float CourseErrorCorrection;//º½ÏòÎó²îĞŞÕıÁ¿	
-	float PitchErrorCorrection;//¸©ÑöÎó²îĞŞÕıÁ¿
-	float RollErrorCorrection;//ºá¹öÎó²îĞŞÕıÁ¿
-	float SideslipAngleAOS;//²à»¬½ÇAOS
-	float AttackAngleAOA;//¹¥½ÇAOA
+	float RollRate;//æ»šè½¬è§’é€Ÿåº¦
+	float WindSpeed;//é£é€Ÿ
+	float WindDirection;//é£å‘
+	float GNSSGroundSpeed;//GNSSåœ°é€Ÿ
+	float GNSSTrackAngle;//GNSSèˆªè¿¹è§’
+	float CourseErrorCorrection;//èˆªå‘è¯¯å·®ä¿®æ­£é‡	
+	float PitchErrorCorrection;//ä¿¯ä»°è¯¯å·®ä¿®æ­£é‡
+	float RollErrorCorrection;//æ¨ªæ»šè¯¯å·®ä¿®æ­£é‡
+	float SideslipAngleAOS;//ä¾§æ»‘è§’AOS
+	float AttackAngleAOA;//æ”»è§’AOA
 
-	float CalibratedAirspeedVc;//Ğ£×¼¿ÕËÙVc
-	float VacuoSpeedVt;//Õæ¿ÕËÙVt
-	float MachNumberM;//ÂíºÕÊıM
-	float BarometricHeightH;//ÏÔÊ¾ÆøÑ¹¸ß¶ÈH
-	float StaticTempTs;//¾²ÎÂTs
-	float LiftingSpeedHPR;//Éı½µËÙ¶ÈHPR
-	float TotalTempTt;//×ÜÎÂTt
-	float StandardPressureAltitudeHQNE;//±ê×¼ÆøÑ¹¸ß¶ÈHQNE
-	float StandardPressurePs;//¾²Ñ¹Ps	
-	float TotalPressurePt;//È«Ñ¹Pt
+	float CalibratedAirspeedVc;//æ ¡å‡†ç©ºé€ŸVc
+	float VacuoSpeedVt;//çœŸç©ºé€ŸVt
+	float MachNumberM;//é©¬èµ«æ•°M
+	float BarometricHeightH;//æ˜¾ç¤ºæ°”å‹é«˜åº¦H
+	float StaticTempTs;//é™æ¸©Ts
+	float LiftingSpeedHPR;//å‡é™é€Ÿåº¦HPR
+	float TotalTempTt;//æ€»æ¸©Tt
+	float StandardPressureAltitudeHQNE;//æ ‡å‡†æ°”å‹é«˜åº¦HQNE
+	float StandardPressurePs;//é™å‹Ps	
+	float TotalPressurePt;//å…¨å‹Pt
 
-	float DMECurrentChannelNumber;//DMEµ±Ç°²¨µÀºÅ
-	float DMEDistance;//DME¾àÀë
-	float DMEGroundSpeed;//DMEµØËÙ
-	float DMEInTheTime;//DMEµ½Ì¨Ê±¼ä
-	float VORAzimuthAngle;//VOR·½Î»½Ç
-	float LOCDiviation;//LOCÆ«²î
-	float GSDiviation;//GSÆ«²î
-	float RAAltitude;//RA¸ß¶È
-	float FrontWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©Ç°ÂÖÓĞÎŞÂÖÔØ
-	float LeftWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©×óÂÖÓĞÎŞÂÖÔØ
+	float DMECurrentChannelNumber;//DMEå½“å‰æ³¢é“å·
+	float DMEDistance;//DMEè·ç¦»
+	float DMEGroundSpeed;//DMEåœ°é€Ÿ
+	float DMEInTheTime;//DMEåˆ°å°æ—¶é—´
+	float VORAzimuthAngle;//VORæ–¹ä½è§’
+	float LOCDiviation;//LOCåå·®
+	float GSDiviation;//GSåå·®
+	float RAAltitude;//RAé«˜åº¦
+	float FrontWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å‰è½®æœ‰æ— è½®è½½
+	float LeftWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å·¦è½®æœ‰æ— è½®è½½
 
-	float RightWheelLoadSignal;//ÂÖÔØĞÅºÅ£¨WOW£©ÓÒÂÖÓĞÎŞÂÖÔØ
-	float FrontUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ Ç°ÂÖÊÕÆğ/·ÅÏÂ
-	float LeftUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ ×óÂÖÊÕÆğ/·ÅÏÂ
-	float RightUndercarriageCondition;//ÆğÂä¼Ü×´Ì¬ ÓÒÂÖÊÕÆğ/·ÅÏÂ
-	float TheFlapsPosition;//½óÒíÎ»ÖÃ	
-	float AmbientTemperature;//»úÍâÎÂ¶ÈOAT(Ch8 Temp)
+	float RightWheelLoadSignal;//è½®è½½ä¿¡å·ï¼ˆWOWï¼‰å³è½®æœ‰æ— è½®è½½
+	float FrontUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å‰è½®æ”¶èµ·/æ”¾ä¸‹
+	float LeftUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å·¦è½®æ”¶èµ·/æ”¾ä¸‹
+	float RightUndercarriageCondition;//èµ·è½æ¶çŠ¶æ€ å³è½®æ”¶èµ·/æ”¾ä¸‹
+	float TheFlapsPosition;//è¥Ÿç¿¼ä½ç½®	
+	float AmbientTemperature;//æœºå¤–æ¸©åº¦OAT(Ch8 Temp)
 	float N1;//N1(Ch 1 RPM)
 	float PROP;//PROP(Ch 2 RPM)
 	float RWing;//R Wing (Ch2 Fuel Level)
@@ -112,21 +112,21 @@ struct FS_DU
 	float FUELP;//FUEL P (Ch2 Pressure)
 	float TORQ;//TORQ          (Ch1 Pressure)
 	float FuelFlow;//Fuel Flow
-}
+};
 
-//³õÊ¼»¯HUDÊı¾İ
+//åˆå§‹åŒ–HUDæ•°æ®
 struct ST_HUD_INIT_DATA
 {
-	unsigned char packageType;		//Êı¾İ°üÀàĞÍ
-	unsigned char cycleCount;		//Ñ­»·¼ÆÊı
-	unsigned char dataValidity;		//Êı¾İÓĞĞ§ĞÔ
-	unsigned short VFE;				//×î´ó½óÒí²Ù×÷ËÙ¶È
-	unsigned short VMO;				//×î´óÕı³£²Ù×÷ËÙ¶È
-	unsigned short VMax;			//×î´óÑİÊ¾²Ù×÷ËÙ¶È
-	unsigned short VS;				//Ê§ËÙËÙ¶ÈVs
-	unsigned short minPressureAlt;	//×îµÍÆøÑ¹¸ß¶È
-	unsigned short VSO;				//Ê§ËÙËÙ¶ÈVso
-	unsigned short VD;				//×î´ó¸©³åËÙ¶ÈVd
-	unsigned char checksum;			//Ğ£ÑéºÍ
+	unsigned char packageType;		//æ•°æ®åŒ…ç±»å‹
+	unsigned char cycleCount;		//å¾ªç¯è®¡æ•°
+	unsigned char dataValidity;		//æ•°æ®æœ‰æ•ˆæ€§
+	unsigned short VFE;				//æœ€å¤§è¥Ÿç¿¼æ“ä½œé€Ÿåº¦
+	unsigned short VMO;				//æœ€å¤§æ­£å¸¸æ“ä½œé€Ÿåº¦
+	unsigned short VMax;			//æœ€å¤§æ¼”ç¤ºæ“ä½œé€Ÿåº¦
+	unsigned short VS;				//å¤±é€Ÿé€Ÿåº¦Vs
+	unsigned short minPressureAlt;	//æœ€ä½æ°”å‹é«˜åº¦
+	unsigned short VSO;				//å¤±é€Ÿé€Ÿåº¦Vso
+	unsigned short VD;				//æœ€å¤§ä¿¯å†²é€Ÿåº¦Vd
+	unsigned char checksum;			//æ ¡éªŒå’Œ
 };
 #pragma  pack()
