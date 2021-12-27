@@ -17,6 +17,8 @@ add_executable(${PROJECT_NAME}
     datacallback.cpp
     ICD/FlightSimData.h
     ICD/DuProtocolData.h
+    widget.h
+    widget.cpp
     )
 
 #

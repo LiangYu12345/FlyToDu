@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.5)
 
-project(Simulation)
+project(FlyToLib)
 
 add_subdirectory(SchedulerLib)
 add_subdirectory(FlyToDuApp)
