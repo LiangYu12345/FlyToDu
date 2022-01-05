@@ -221,7 +221,7 @@ void DataCallback::dealFlyDuData(const FS_DU * structfly)
         st->insGnss1.pitchErrorCorrection = structfly->PitchErrorCorrection / 0.01;
         st->insGnss1.rollErrorCorrection = structfly->RollErrorCorrection / 0.01;
         //系统状态字    (待处理)
-        st->insGnss1.gnssSysState = 0x7f3b;   //0x7f3b
+        st->insGnss1.gnssSysState = 0x7f3b;   //0x7ffb
         st->insGnss1.gnssSysError = 0;
         //系统版本      (待处理)
         st->insGnss1.gnssVersion = 0;
@@ -257,7 +257,7 @@ void DataCallback::dealFlyDuData(const FS_DU * structfly)
         st->insGnss2.pitchErrorCorrection = structfly->PitchErrorCorrection / 0.01;
         st->insGnss2.rollErrorCorrection = structfly->RollErrorCorrection / 0.01;
         //系统状态字    (待处理)
-        st->insGnss2.gnssSysState = 0x7f3b;
+        st->insGnss2.gnssSysState = 0x7f3b;  //0x7ffb
         st->insGnss2.gnssSysError = 0;
         //系统版本     (待处理)
         st->insGnss2.gnssVersion = 0;
@@ -281,7 +281,7 @@ void DataCallback::dealFlyDuData(const FS_DU * structfly)
         //系统版本     (待处理)
         st->adc1.version = 0;
         //气压基准设定  (待处理)
-        st->adc1.baroSet = 0;    //    / 0.01
+        st->adc1.baroSet = 18;    //    / 0.01
         st->adc1.baroStd = 0x00;
     }
 
@@ -303,21 +303,27 @@ void DataCallback::dealFlyDuData(const FS_DU * structfly)
         //系统版本     (待处理)
         st->adc2.version = 0;
         //气压基准设定  (待处理)
-        st->adc2.baroSet = 0;  //   / 0.01
+        st->adc2.baroSet = 18;  //   / 0.01 设置固定值
         st->adc2.baroStd = 0x00;
     }
 
     {
         st->cns.moduleState = 0xff;
-         //VHF 状态        (待处理)
+         //VHF 状态
         st->cns.vhf1.state = 0xc0;    //
-        st->cns.vhf1.frequency = 0;   //   / 0.001
+        st->cns.vhf1.frequency = 130.000;   //   / 0.001
         // 选呼码
         st->cns.vhf1.selcal = 0;
-        // ADF状态
+
         st->cns.vhf2.state = 0xc0;
-        st->cns.vhf2.frequency = 0;    //   / 0.001
+        st->cns.vhf2.frequency = 130.000;    //   / 0.001
         st->cns.vhf2.selcal = 0;
+
+        st->cns.adf.state = 0x03;
+        st->cns.adf.frequency = 200.00;   //  /0.5
+        st->cns.adf.azimuth = 0;     //  0.1
+        // ADF站台识别码  (待处理)
+        st->cns.adf.code = 0;
 
         st->cns.dme.state = 0xff;
         st->cns.dme.channel = structfly->DMECurrentChannelNumber;
@@ -328,8 +334,8 @@ void DataCallback::dealFlyDuData(const FS_DU * structfly)
         st->cns.dme.code = 0;
 
         st->cns.mmr.state = 0xff;
-        //MMR当前频率  (待处理)
-        st->cns.mmr.frequency = 0;   //   / 0.01
+        //MMR当前频率
+        st->cns.mmr.frequency = 110.00;   //   / 0.01
         st->cns.mmr.vorAzimuth = structfly->VORAzimuthAngle / 0.04395;
         st->cns.mmr.locDeviation = structfly->LOCDiviation / 0.4 * 2e-12;
         st->cns.mmr.gsDeviation = structfly->GSDiviation / 0.8 * 2e-12;
