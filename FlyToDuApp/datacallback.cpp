@@ -77,7 +77,7 @@ void DataCallback::apply(const DDSDatagram &datagram)
         const FS_DU * structfly = reinterpret_cast<const FS_DU*>(datagram.data().data());
 
 
-        flag ^= 0x01;
+        flag ^= 0x02;
 
         dealFlyDuData(structfly);
     }
