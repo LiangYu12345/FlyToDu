@@ -15,14 +15,11 @@ add_executable(${PROJECT_NAME}
     main.cpp
     datacallback.h
     datacallback.cpp
-    ICD/FlightSimData.h
-    ICD/DuProtocolData.h
-    widget.h
-    widget.cpp
     )
 
 #
 find_package(Qt5 REQUIRED COMPONENTS Core)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/ICD)
 target_link_libraries(${PROJECT_NAME} Lib::Scheduler)
 
 
